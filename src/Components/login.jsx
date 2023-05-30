@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div className="container">
       <h3 className="text-center">Please Login</h3>
-      <form className="w-25 my-3 m-auto">
+      <form className="w-25 my-3 m-auto ">
         <div className="form-outline mb-4">
           <input type="email" id="form2Example1" className="form-control" />
           <label className="form-label" for="form2Example1">
@@ -38,20 +38,22 @@ const Login = () => {
           </div>
 
           <div className="col">
-            <a href="#!">Forgot password?</a>
+        <Link to={"/"} className="text-decoration-none">Forgot password?</Link>
           </div>
         </div>
 
-        <button
+     <div className="text-center">
+     <button
           type="button"
-          className="btn text-center btn-primary btn-block mb-4"
+          className="btn btn-primary btn-block mb-4"
         >
-          Sign in
+          Login
         </button>
+     </div>
 
         <div className="text-center">
           <p>
-            Not a member? <Link to={"/register"}>Register</Link>
+            Not a member? <Link to={"/register"} className="text-decoration-none">Register</Link>
           </p>
           <p>or sign up with:</p>
           <button type="button" className="btn btn-link btn-floating mx-1">

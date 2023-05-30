@@ -9,7 +9,7 @@ const Navbar = () => {
       </Link>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <Link class="fs-5 me-3 py-2 link-body-emphasis text-decoration-none" to="/login">
+        <Link class="fs-5 me-3 py-2  text-decoration-none text-primary" to="/login">
           Login
         </Link>
         <Link class="fs-5 me-3 py-2 link-body-emphasis text-decoration-none" to="/register">
