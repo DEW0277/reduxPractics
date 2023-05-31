@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "../ui/input";
 import { useDispatch,useSelector } from "react-redux";
-import { loginUserStart } from "../slice/auth";
+import { registerUserStart } from "../slice/auth";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -12,7 +12,7 @@ const Register = () => {
 
   const registerHandler = e => {
     e.preventDefault()
-    dispatch(loginUserStart());
+    dispatch(registerUserStart());
 
   }
 
