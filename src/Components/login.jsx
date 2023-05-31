@@ -1,79 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import Input from "../ui/input";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
-    <div className="container">
-      <h3 className="text-center">Please Login</h3>
-      <form className="w-25 my-3 m-auto ">
-        <div className="form-outline mb-4">
-          <input type="email" id="form2Example1" className="form-control" />
-          <label className="form-label" for="form2Example1">
-            Email address
-          </label>
-        </div>
-
-        <div className="form-outline mb-4">
-          <input type="password" id="form2Example2" className="form-control" />
-          <label className="form-label" for="form2Example2">
-            Password
-          </label>
-        </div>
-
-        <div className="row mb-4">
-          <div className="col d-flex justify-content-center">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value=""
-                id="form2Example31"
-                checked
-              />
-              <label className="form-check-label" for="form2Example31">
-                {" "}
-                Remember me{" "}
-              </label>
-            </div>
-          </div>
-
-          <div className="col">
-        <Link to={"/"} className="text-decoration-none">Forgot password?</Link>
-          </div>
-        </div>
-
-     <div className="text-center">
-     <button
-          type="button"
-          className="btn btn-primary btn-block mb-4"
-        >
+    <div className="text-center">
+    <main className="form-signin w-25 m-auto">
+      <form>
+        <h1 className="h3 mb-3 fw-normal mt-3">Please login</h1>
+        <Input label={"Email address"} state={email} setState={setEmail} />
+        <Input
+          label={"Password"}
+          type={"password"}
+          state={password}
+          setState={setPassword}
+        />
+        <button className="w-100 btn btn-lg btn-primary mt-3" type="submit">
           Login
         </button>
-     </div>
-
-        <div className="text-center">
-          <p>
-            Not a member? <Link to={"/register"} className="text-decoration-none">Register</Link>
-          </p>
-          <p>or sign up with:</p>
-          <button type="button" className="btn btn-link btn-floating mx-1">
-            <i className="fab fa-facebook-f"></i>
-          </button>
-
-          <button type="button" className="btn btn-link btn-floating mx-1">
-            <i className="fab fa-google"></i>
-          </button>
-
-          <button type="button" className="btn btn-link btn-floating mx-1">
-            <i className="fab fa-twitter"></i>
-          </button>
-
-          <button type="button" className="btn btn-link btn-floating mx-1">
-            <i className="fab fa-github"></i>
-          </button>
-        </div>
+        <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
       </form>
-    </div>
+    </main>
+  </div>
   );
 };
 
