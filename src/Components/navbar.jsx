@@ -17,7 +17,7 @@ const Navbar = () => {
         >
           Login
         </Link>
-        -
+
         <Link
           className="fs-5 me-3 py-2 linkbody-emphasis text-decoration-none"
           to="/register"

@@ -34,7 +34,6 @@ const Login = () => {
           >
             {isLoading ? "Loading..." : "Login"}
           </button>
-          <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         </form>
       </main>
     </div>

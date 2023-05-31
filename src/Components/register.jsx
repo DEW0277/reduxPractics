@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Input from "../ui/input";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { registerUserStart } from "../slice/auth";
 
 const Register = () => {
@@ -10,11 +10,10 @@ const Register = () => {
   const { isLoading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
-  const registerHandler = e => {
-    e.preventDefault()
+  const registerHandler = (e) => {
+    e.preventDefault();
     dispatch(registerUserStart());
-
-  }
+  };
 
   return (
     <div className="text-center">
@@ -29,10 +28,14 @@ const Register = () => {
             state={password}
             setState={setPassword}
           />
-          <button className="w-100 btn btn-lg btn-primary mt-3" disabled={isLoading} onClick={registerHandler} type="submit">
+          <button
+            className="w-100 btn btn-lg btn-primary mt-3"
+            disabled={isLoading}
+            onClick={registerHandler}
+            type="submit"
+          >
             {isLoading ? "Loading..." : "Register"}
           </button>
-          <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
         </form>
       </main>
     </div>
